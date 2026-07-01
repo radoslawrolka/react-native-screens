@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: macos-26-xlarge
+    runs-on: macos-26
     timeout-minutes: 60
     env:
       WORKING_DIRECTORY: FabricExample
