@@ -1,8 +1,6 @@
 #pragma once
 
-#if defined(__cplusplus)
 #import <React/RCTViewManager.h>
-#endif // __cplusplus
 
 NS_ASSUME_NONNULL_BEGIN
 
