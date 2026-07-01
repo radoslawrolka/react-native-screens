@@ -137,12 +137,15 @@ function findPcms(root) {
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) {
         walk(full);
-      } else if (
-        entry.isFile() &&
-        pcmName.test(entry.name) &&
-        full.includes(`${path.sep}SwiftExplicitPrecompiledModules${path.sep}`)
-      ) {
-        results.push(full);
+      } else {
+        console.log(full);
+        if (
+          entry.isFile() &&
+          pcmName.test(entry.name) &&
+          full.includes(`${path.sep}SwiftExplicitPrecompiledModules${path.sep}`)
+        ) {
+          results.push(full);
+        }
       }
     }
   };
